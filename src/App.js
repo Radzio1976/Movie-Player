@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Mp4Player from '../src/components/Mp4Player';
 import Movies from '../src/components/Movies';
 
