@@ -1,12 +1,15 @@
 .Mp4Player {
     width: 66%;
     height: 33rem;
-    position: relative;
-    .react-player {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
+    .react-player-wrapper {
+        height: 100%;
+        position: relative;
+        .react-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
     }
 }
