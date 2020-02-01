@@ -14,12 +14,6 @@ class MoviesPlayer extends React.Component {
         })
     }
 
-    changeMovie = (value) => {
-        this.setState({
-            currentMovie: value
-        })
-    }
-
     render() {
         let cur = null
         for (let i = 0; i < this.state.movies.length; i++) {

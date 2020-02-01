@@ -3,9 +3,6 @@ import ReactPlayer from 'react-player';
 import { withRouter } from 'react-router-dom'
 
 class Movie extends React.Component {
-    changeMovie = () => {
-        this.props.changeMovie();//call parent `changeMovie` method
-    }
 
     render() {
         const prettyUrl = this.props.title.toLowerCase().replace(/ /ig, "-")

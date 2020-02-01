@@ -9,7 +9,7 @@ class Movies extends React.Component {
                 {
                     this.props.movies.map((value) => {
                         return (
-                            <Movie id={value.id} url={value.url} title={value.title} description={value.description} currentMovie={this.props.currentMovie} changeMovie={this.props.changeMovie} />
+                            <Movie id={value.id} url={value.url} title={value.title} description={value.description} currentMovie={this.props.currentMovie} />
                         )
                     })
                 }
