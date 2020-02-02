@@ -1,0 +1,34 @@
+{
+  "comments": [
+    {
+      "movieId": 2,
+      "name": "Radosław",
+      "comment": "Bardzoo dobry film",
+      "id": 1
+    },
+    {
+      "movieId": 1,
+      "name": "Tomasz",
+      "comment": "Bardzoo dobry film",
+      "id": 1
+    },
+    {
+      "movieId": 2,
+      "name": "Marjan",
+      "comment": "Super film",
+      "id": 1
+    },
+    {
+      "movieId": 5,
+      "name": "Jarek",
+      "comment": "Fajny",
+      "id": 2
+    },
+    {
+      "movieId": 1,
+      "name": "Radosław Tomaszewski",
+      "comment": "Podoba mi się",
+      "id": 3
+    }
+  ]
+}

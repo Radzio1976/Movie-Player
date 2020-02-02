@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 class Movie extends React.Component {
 
     render() {
+        console.log(this.props.currentMovie)
         const prettyUrl = this.props.title.toLowerCase().replace(/ /ig, "-")
         return (
             <div className="Movie" style={{ visibility: this.props.currentMovie === this.props.id ? "hidden" : "visible", height: this.props.currentMovie === this.props.id ? "0px" : "", marginBottom: this.props.currentMovie === this.props.id ? "0px" : "", paddingBottom: this.props.currentMovie === this.props.id ? "0px" : "" }}>

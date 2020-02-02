@@ -23,7 +23,7 @@ class MoviesPlayer extends React.Component {
         }
         return (
             <div className="MoviesPlayer">
-                <Mp4Player movie={cur} />
+                <Mp4Player movie={cur} currentMovie={this.state.currentMovie} />
                 <Movies movies={this.state.movies} currentMovie={this.state.currentMovie} changeMovie={this.changeMovie} />
             </div>
         )
