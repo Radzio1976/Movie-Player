@@ -18,7 +18,7 @@ class AllMovies extends React.Component {
                         return (
                             <div className="movie-container">
                                 <div className="movie-player-wrapper">
-                                    <ReactPlayer className="video-player" url={value.url} />
+                                    <ReactPlayer className="video-player" url={value.url} light />
                                 </div>
                                 <div onClick={() => this.props.history.push(`/video/${prettyUrl}`, { id: value.id })} className="video-description-wrapper">
                                     <h3>{value.title.slice(0, 20)} ...</h3>

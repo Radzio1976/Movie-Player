@@ -9,7 +9,7 @@ class Movie extends React.Component {
         return (
             <div className="Movie" style={{ visibility: this.props.currentMovie === this.props.id ? "hidden" : "visible", height: this.props.currentMovie === this.props.id ? "0px" : "", marginBottom: this.props.currentMovie === this.props.id ? "0px" : "", paddingBottom: this.props.currentMovie === this.props.id ? "0px" : "" }}>
                 <div className="movie-wrapper">
-                    <ReactPlayer className="movie-player" url={this.props.url} />
+                    <ReactPlayer className="movie-player" url={this.props.url} light />
                 </div>
                 <div onClick={() => {
                     this.props.history.push(`/video/${prettyUrl}`, { id: this.props.id })

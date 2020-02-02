@@ -81,8 +81,8 @@ class App extends React.Component {
       <BrowserRouter>
         <Logo />
         <Switch>
-          <Route exact path="/" exact component={() => <AllMovies movies={this.state.movies} />} />
-          <Route exact path="/video/:title" component={(props) => <MoviesPlayer movies={this.state.movies} {...props} />} />
+          <Route path="/" exact component={() => <AllMovies movies={this.state.movies} />} />
+          <Route path="/video/:title" component={(props) => <MoviesPlayer movies={this.state.movies} {...props} />} />
         </Switch>
       </BrowserRouter>
     )

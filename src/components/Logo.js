@@ -5,7 +5,7 @@ class Logo extends React.Component {
     render() {
         return (
             <div className="Logo">
-                <h1 onClick={() => this.props.history.push("/")}>MyTube</h1>
+                <h1 onClick={() => this.props.history.push("/")}>My<span>Tube</span></h1>
             </div>
         )
     }
