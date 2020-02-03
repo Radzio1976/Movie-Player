@@ -11,7 +11,7 @@ class Comments extends React.Component {
     componentDidMount() {
         const comments = this.state.comments;
         Axios.get("http://localhost:3000/comments").then((response) => {
-            for (let i = 0; i < response.data.length; i++) {
+            for (let i = response.data.length - 1; i >= 0; i--) {
                 if (response.data[i].movieId === this.props.currentMovie) {
                     comments.push(response.data[i])
                 }
@@ -30,16 +30,20 @@ class Comments extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:3000/comments", { movieId: this.props.currentMovie, name: this.state.name, comment: this.state.comment }).then((response) => {
+        const comments = this.state.comments;
+        let today = new Date();
+        let time = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + " | " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        Axios.post("http://localhost:3000/comments", { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment }).then((response) => {
+            comments.splice(0, 0, { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment })
             this.setState({
                 name: "",
-                comment: ""
+                comment: "",
+                comments
             })
         })
     }
 
     render() {
-        console.log(this.state.comments)
         return (
             <div className="Comments-container">
                 <form onSubmit={this.handleSubmit}>
@@ -49,14 +53,14 @@ class Comments extends React.Component {
                     <label>Zostaw komentarz
                         <textarea name="comment" value={this.state.comment} onChange={this.handleChange} />
                     </label>
-                    <button>Wyślij</button>
+                    <button>Dodaj komentarz</button>
                 </form>
                 {
                     this.state.comments.map((value) => {
                         console.log(value)
                         return (
                             <div className="Comments">
-                                <h3>{value.name}</h3>
+                                <h3>{value.name} <span>{value.time}</span></h3>
                                 <p>{value.comment}</p>
                             </div>
                         )

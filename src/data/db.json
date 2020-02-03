@@ -1,34 +1,39 @@
 {
   "comments": [
     {
-      "movieId": 2,
+      "movieId": 0,
+      "time": "2020-2-2 | 16:42:37",
       "name": "Radosław",
-      "comment": "Bardzoo dobry film",
+      "comment": "Lubię ten film.",
       "id": 1
     },
     {
-      "movieId": 1,
-      "name": "Tomasz",
-      "comment": "Bardzoo dobry film",
-      "id": 1
-    },
-    {
-      "movieId": 2,
-      "name": "Marjan",
-      "comment": "Super film",
-      "id": 1
-    },
-    {
-      "movieId": 5,
-      "name": "Jarek",
-      "comment": "Fajny",
+      "movieId": 0,
+      "time": "2020-2-2 | 16:44:31",
+      "name": "Alfred",
+      "comment": "OK.",
       "id": 2
     },
     {
-      "movieId": 1,
-      "name": "Radosław Tomaszewski",
-      "comment": "Podoba mi się",
+      "movieId": 4,
+      "time": "2020-2-2 | 16:45:35",
+      "name": "Tomek",
+      "comment": "Super film.",
       "id": 3
+    },
+    {
+      "movieId": 4,
+      "time": "2020-2-2 | 16:45:52",
+      "name": "Mietek",
+      "comment": "OK.",
+      "id": 4
+    },
+    {
+      "movieId": 4,
+      "time": "2020-2-3 | 16:34:52",
+      "name": "Tomasz Tomaszewski",
+      "comment": "Bardzo podobał mi się ten film!!!",
+      "id": 5
     }
   ]
 }

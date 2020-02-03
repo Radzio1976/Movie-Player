@@ -13,10 +13,10 @@ class Mp4Player extends React.Component {
                             className="react-player"
                             url={this.props.movie.url} playing controls />
                     </div>
-                    <div className="nowPlaying-title">
-                        <h1>{this.props.movie.title}</h1>
-                        <h4>{this.props.movie.description}</h4>
-                    </div>
+                </div>
+                <div className="nowPlaying-title">
+                    <h1>{this.props.movie.title}</h1>
+                    <h4>{this.props.movie.description}</h4>
                 </div>
                 <Comments currentMovie={this.props.currentMovie} />
             </div>
