@@ -5,7 +5,8 @@ class Comments extends React.Component {
     state = {
         name: "",
         comment: "",
-        comments: []
+        comments: [],
+        error: ""
     }
 
     componentDidMount() {
@@ -33,14 +34,21 @@ class Comments extends React.Component {
         const comments = this.state.comments;
         let today = new Date();
         let time = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + " | " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        Axios.post("http://localhost:3000/comments", { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment }).then((response) => {
-            comments.splice(0, 0, { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment })
-            this.setState({
-                name: "",
-                comment: "",
-                comments
+        if (this.state.name.length > 5 || this.state.comment.length > 10) {
+            Axios.post("http://localhost:3000/comments", { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment }).then((response) => {
+                comments.splice(0, 0, { movieId: this.props.currentMovie, time: time, name: this.state.name, comment: this.state.comment })
+                this.setState({
+                    name: "",
+                    comment: "",
+                    comments
+                })
             })
-        })
+        } else {
+            this.setState({
+                error: "Pola Imię oraz Zostaw komentarz nie mogą być puste"
+            })
+            return
+        }
     }
 
     render() {
@@ -55,6 +63,7 @@ class Comments extends React.Component {
                     </label>
                     <button>Dodaj komentarz</button>
                 </form>
+                <p className="comment-error">{this.state.error}</p>
                 {
                     this.state.comments.map((value) => {
                         console.log(value)

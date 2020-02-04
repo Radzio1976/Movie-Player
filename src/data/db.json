@@ -34,6 +34,13 @@
       "name": "Tomasz Tomaszewski",
       "comment": "Bardzo podobał mi się ten film!!!",
       "id": 5
+    },
+    {
+      "movieId": 2,
+      "time": "2020-2-4 | 17:4:27",
+      "name": "Zbigniew",
+      "comment": "Bardzo podoba mi się ten film...",
+      "id": 6
     }
   ]
 }

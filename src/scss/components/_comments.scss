@@ -1,7 +1,6 @@
 .Comments-container {
     margin-top: 15px;
     form {
-        margin-bottom: 50px;
         input {
             display: block;
             width: 25%;
@@ -30,6 +29,10 @@
             cursor: pointer;
         }
     }
+    .comment-error {
+        color: red;
+        margin-bottom: 50px;
+    }
     .Comments {
         margin-bottom: 12px;
         h3 {
@@ -37,7 +40,7 @@
             span {
                 font-size: 13px;
                 font-weight: 100;
-                margin-left: 10px;
+                float: right;
             }
         }
         p {
