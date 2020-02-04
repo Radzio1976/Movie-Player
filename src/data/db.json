@@ -41,6 +41,13 @@
       "name": "Zbigniew",
       "comment": "Bardzo podoba mi się ten film...",
       "id": 6
+    },
+    {
+      "movieId": 0,
+      "time": "2020-2-4 | 17:35:9",
+      "name": "Przemysław",
+      "comment": "Spoko film...",
+      "id": 7
     }
   ]
 }

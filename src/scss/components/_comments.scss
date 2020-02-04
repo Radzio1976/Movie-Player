@@ -7,7 +7,10 @@
             border: 0px solid;
             border-bottom: 1px solid darkgray;
             outline: none;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            font-family: 'Oswald', sans-serif;
+    padding: 3px;
         }
         textarea {
             display: block;
@@ -16,6 +19,9 @@
             border: 0px solid;
             border-bottom: 1px solid darkgray;
             outline: none;
+            font-size: 17px;
+            font-family: 'Oswald', sans-serif;
+    padding: 3px;
         }
         button {
             float: right;
@@ -27,11 +33,13 @@
             background-color: #cccccc;
             margin-top: 10px;
             cursor: pointer;
+            outline: none;
         }
     }
     .comment-error {
         color: red;
         margin-bottom: 50px;
+        font-size: 15px;
     }
     .Comments {
         margin-bottom: 12px;

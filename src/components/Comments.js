@@ -55,12 +55,8 @@ class Comments extends React.Component {
         return (
             <div className="Comments-container">
                 <form onSubmit={this.handleSubmit}>
-                    <label>Imię
-                        <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                    </label>
-                    <label>Zostaw komentarz
-                        <textarea name="comment" value={this.state.comment} onChange={this.handleChange} />
-                    </label>
+                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Imię" />
+                    <textarea name="comment" value={this.state.comment} onChange={this.handleChange} placeholder="Zostaw komentarz" />
                     <button>Dodaj komentarz</button>
                 </form>
                 <p className="comment-error">{this.state.error}</p>
