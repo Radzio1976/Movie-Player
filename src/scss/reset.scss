@@ -4,18 +4,26 @@
     box-sizing: border-box;
 }
 
-$tablet: 950px;
+$xl: 1240px;
 
-@mixin tablet {
-    @media (max-width: #{$tablet}) {
+@mixin xl {
+    @media (max-width: #{$xl}) {
         @content;
     }
 }
 
-$phone: 470px;
+$lg: 950px;
 
-@mixin phone {
-    @media (max-width: #{$phone}) {
+@mixin lg {
+    @media (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+$md: 470px;
+
+@mixin md {
+    @media (max-width: #{$md}) {
         @content;
     }
 }

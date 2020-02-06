@@ -1,8 +1,20 @@
 .Mp4Player-and-Comments-container {
     width: 66%;
+    @include lg {
+        width: 100%;
+    }
     .Mp4Player {
         width: 100%;
         height: 33rem;
+        @include xl {
+            height: 412px;
+        }
+        @include lg {
+            height: 462px;
+        }
+        @include md {
+            height: 258px;
+        }
         .react-player-wrapper {
             height: 100%;
             position: relative;

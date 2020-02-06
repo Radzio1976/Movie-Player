@@ -1,3 +1,6 @@
 .Movies {
     width: 34%;
+    @include lg {
+        width: 100%;
+    }
 }

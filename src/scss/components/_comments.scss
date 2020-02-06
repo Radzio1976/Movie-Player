@@ -26,7 +26,7 @@
         button {
             float: right;
             text-transform: uppercase;
-            padding: 7px;
+            padding: 2px;
             border: 0px;
             font-weight: 900;
             color: white;
@@ -51,9 +51,26 @@
                 float: right;
             }
         }
+        button {
+            float: right;
+            text-transform: uppercase;
+            padding: 2px;
+            border: 0px;
+            font-weight: 900;
+            color: white;
+            background-color: #cccccc;
+            margin-top: 10px;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: 22px;
+            margin-left: 10px;
+        }
         p {
             font-size: 13px;
             font-weight: 100;
+        }
+        hr {
+            margin-top: 66px;
         }
     }    
 }

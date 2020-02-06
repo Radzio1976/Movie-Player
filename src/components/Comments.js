@@ -6,7 +6,9 @@ class Comments extends React.Component {
         name: "",
         comment: "",
         comments: [],
-        error: ""
+        error: "",
+        commentsQty: 3,
+        buttonName: "Więcej komentarzy"
     }
 
     componentDidMount() {
@@ -51,7 +53,21 @@ class Comments extends React.Component {
         }
     }
 
+    getMoreComments = (index) => {
+        if (this.state.commentsQty === this.state.comments.length - 1) {
+            this.setState({
+                commentsQty: 3
+            })
+        } else {
+            this.setState({
+                commentsQty: this.state.comments.length - 1
+            })
+        }
+    }
+
     render() {
+        console.log(this.state.comments)
+        console.log(this.state.commentsQty.length)
         return (
             <div className="Comments-container">
                 <form onSubmit={this.handleSubmit}>
@@ -61,12 +77,14 @@ class Comments extends React.Component {
                 </form>
                 <p className="comment-error">{this.state.error}</p>
                 {
-                    this.state.comments.map((value) => {
+                    this.state.comments.map((value, index) => {
                         console.log(value)
                         return (
-                            <div className="Comments">
+                            <div style={{ display: index < this.state.commentsQty + 1 ? "block" : "none" }} className="Comments">
                                 <h3>{value.name} <span>{value.time}</span></h3>
                                 <p>{value.comment}</p>
+                                <button style={{ display: index === 3 ? "block" : "none" }} onClick={() => this.getMoreComments(index)}>{this.state.commentsQty === 3 ? "Więcej komentarzy" : "Mniej komentarzy"}</button>
+                                <hr style={{ display: index === this.state.commentsQty ? "block" : "none" }}></hr>
                             </div>
                         )
                     })

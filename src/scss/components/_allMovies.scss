@@ -7,10 +7,10 @@
         width: 25%;
         padding: 10px;
         padding-left: 0px;
-        @include tablet {
+        @include lg {
             width: 50%;
         }
-        @include phone {
+        @include md {
             width: 100%;
         }
         .movie-player-wrapper {
@@ -27,11 +27,13 @@
         }
         .video-description-wrapper {
             h3 {
+                font-size: 17px;
                 margin-top: 5px;
                 margin-bottom: 5px;
                 cursor: pointer;
             }
             p {
+                font-size: 14px;
                 cursor: pointer;
             }
         }

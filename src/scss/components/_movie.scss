@@ -4,10 +4,24 @@
     margin-left: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid darkgrey;
+    @include xl {
+        flex-direction: column;
+    }
+    @include lg {
+        flex-direction: row;
+    }
     .movie-wrapper {
         width: 50%;
         height: 8rem;
         position: relative;
+        @include xl {
+            width: 100%;
+            height: 180px;
+        }
+        @include lg {
+            width: 46%;
+            height: 140px;
+        }
         .movie-player {
             position: absolute;
             top: 0;
@@ -22,12 +36,22 @@
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 10px;
+        @include xl {
+            width: 100%;
+            height: 80px;
+        }
         h3 {
             margin-bottom: 5px;
             cursor: pointer;
+            @include xl {
+                font-size: 17px;
+            }
         }
         p {
             cursor: pointer;
+            @include xl {
+                font-size: 14px;
+            }
         }
     }
 }
