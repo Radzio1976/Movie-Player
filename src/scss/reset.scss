@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+$tablet: 950px;
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 470px;
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
