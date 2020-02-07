@@ -1,7 +1,6 @@
 import React from 'react';
 import Mp4Player from './Mp4Player';
 import Movies from './Movies';
-import Axios from 'axios';
 
 class MoviesPlayer extends React.Component {
     state = {
@@ -10,7 +9,6 @@ class MoviesPlayer extends React.Component {
     }
 
     componentDidMount = () => {
-        console.log(this.props)
         this.setState({
             movies: this.props.movies,
             currentMovie: this.props.location.state.id
@@ -24,7 +22,6 @@ class MoviesPlayer extends React.Component {
                 cur = this.state.movies[i]
             }
         }
-        console.log(this.state.movies)
         return (
             cur === null ?
                 null :

@@ -8,15 +8,13 @@ class AllMovies extends React.Component {
     }
 
     render() {
-        console.log(this.state.movies)
         return (
             <div className="AllMovies">
                 {
-                    this.state.movies.map((value) => {
-                        console.log(value)
+                    this.state.movies.map((value, index) => {
                         const prettyUrl = value.title.toLowerCase().replace(/ /ig, "-")
                         return (
-                            <div className="movie-container">
+                            <div key={index} className="movie-container">
                                 <div className="movie-player-wrapper">
                                     <ReactPlayer className="video-player" url={value.url} light />
                                 </div>

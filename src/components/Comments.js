@@ -66,8 +66,6 @@ class Comments extends React.Component {
     }
 
     render() {
-        console.log(this.state.comments)
-        console.log(this.state.commentsQty.length)
         return (
             <div className="Comments-container">
                 <form onSubmit={this.handleSubmit}>
@@ -78,9 +76,8 @@ class Comments extends React.Component {
                 <p className="comment-error">{this.state.error}</p>
                 {
                     this.state.comments.map((value, index) => {
-                        console.log(value)
                         return (
-                            <div style={{ display: index < this.state.commentsQty + 1 ? "block" : "none" }} className="Comments">
+                            <div key={index} style={{ display: index < this.state.commentsQty + 1 ? "block" : "none" }} className="Comments">
                                 <h3>{value.name} <span>{value.time}</span></h3>
                                 <p>{value.comment}</p>
                                 <button style={{ display: index === 3 ? "block" : "none" }} onClick={() => this.getMoreComments(index)}>{this.state.commentsQty === 3 ? "Więcej komentarzy" : "Mniej komentarzy"}</button>

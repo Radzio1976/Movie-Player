@@ -4,7 +4,6 @@ import Comments from './Comments';
 
 class Mp4Player extends React.Component {
     render() {
-        console.log(this.props.movie.url)
         return (
             <div className="Mp4Player-and-Comments-container">
                 <div className="Mp4Player">

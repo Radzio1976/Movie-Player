@@ -34,6 +34,9 @@
             margin-top: 10px;
             cursor: pointer;
             outline: none;
+            @include xs {
+                font-size: 8px;
+            }
         }
     }
     .comment-error {
@@ -64,6 +67,9 @@
             outline: none;
             margin-bottom: 22px;
             margin-left: 10px;
+            @include xs {
+                font-size: 8px;
+            }
         }
         p {
             font-size: 13px;

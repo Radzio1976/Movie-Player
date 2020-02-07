@@ -20,10 +20,10 @@ $lg: 950px;
     }
 }
 
-$md: 470px;
+$xs: 470px;
 
-@mixin md {
-    @media (max-width: #{$md}) {
+@mixin xs {
+    @media (max-width: #{$xs}) {
         @content;
     }
 }
